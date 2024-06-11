@@ -1,0 +1,16 @@
+CREATE TABLE Sedista (
+    Id INT PRIMARY KEY,
+    BrojSedista INT,
+    Rezervacija BIT
+);
+
+
+DECLARE @i INT = 0;
+
+WHILE @i <= 49
+BEGIN
+    INSERT INTO Sedista (Id, BrojSedista, Rezervacija)
+    VALUES (@i, @i, 0);
+
+    SET @i = @i + 1;
+END;
